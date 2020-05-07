@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Крестики-нолики</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/main.js" defer></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<h1 class="header__title">Крестики-нолики</h1>
+			<div class="scoreboard">
+				<div class="scoreboard__title">
+					<h2 class="scoreboard__name">Счёт <span class="scoreboard__reset">сбросить</span></h2>
+				</div>
+				<div class="score score_comp">
+					<span class="score__title score__title_comp">Компьютер: </span>
+					<span class="score__value score__value_comp"></span>
+				</div>
+				<div class="score score_player">
+					<span class="score__title score__title_player">Вы: </span>
+					<span class="score__value score__value_player"></span>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="field">
+				<div class="row row_bb">
+					<div class="cell cell_br"></div>
+					<div class="cell cell_br"></div>
+					<div class="cell"></div>
+				</div>
+				<div class="row row_bb">
+					<div class="cell cell_br"></div>
+					<div class="cell cell_br"></div>
+					<div class="cell"></div>
+				</div>
+				<div class="row">
+					<div class="cell cell_br"></div>
+					<div class="cell cell_br"></div>
+					<div class="cell"></div>
+				</div>
+			</div>
+			
+			<button class="continue-button">Продолжить</button>
+		</main>
+	</div>	
+</body>
+</html>
