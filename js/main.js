@@ -55,7 +55,7 @@ class Game {
 		event.target.innerText = 'X';
 		event.target.removeEventListener('click', this.playerTurn);
 		
-		if (!this.checkIsWinner()) {
+		if (!this.checkWinner()) {
 			this.computerTurn();
 		} else {
 			this.playerWins++;
@@ -75,11 +75,13 @@ class Game {
 			availableCells[target].removeEventListener('click', this.playerTurn);
 			
 
-			if (this.checkIsWinner()) {
+			if (this.checkWinner()) {
 				this.computerWins++;
 				localStorage.setItem('computerWins', this.computerWins);
 				this.endGame();
 			}
+		} else {
+			this.endGame();
 		}
 	}
 	
@@ -88,7 +90,7 @@ class Game {
 	 * Если найдёт, закрашивает их цветом
 	 * return {Boolean} Признак выигрыша
 	 */
-	checkIsWinner() {
+	checkWinner() {
 		const winningCombinations = [
 			[0, 1, 2],
 			[3, 4, 5],
